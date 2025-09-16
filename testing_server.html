@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gotcha Game</title>
+    <link rel="stylesheet" href="gotcha.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🎯 Gotcha!</h1>
+            <p>Guess or move - match to win!</p>
+        </div>
+        
+        <div class="status-bar">
+            <div class="status-indicator">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="status">Disconnected</span>
+            </div>
+            <div id="roomInfo" style="display: none;">
+                Room: <strong id="roomCode">----</strong>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="info-card">
+                <h3>Your Score</h3>
+                <div class="value" id="yourScore">0</div>
+            </div>
+            <div class="info-card">
+                <h3>Opponent Score</h3>
+                <div class="value" id="opponentScore">0</div>
+            </div>
+        </div>
+        
+        <div class="role-indicator" id="roleIndicator" style="display: none;">
+            Waiting for game...
+        </div>
+        
+        <div class="connection-section">
+            <div class="button-group">
+                <button id="connect" class="btn btn-primary">Connect</button>
+                <button id="host" class="btn btn-success" >Host Game</button>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="input" class="form-input" placeholder="Enter room code to join...">
+                <button id="join" class="btn btn-secondary" disabled>Join Game</button>
+            </div>
+        </div>
+        
+        <div class="controls-section">
+            <h3 class="controls-title">Make Your Move</h3>
+            <div class="direction-pad">
+                <button id="up" class="direction-btn up" disabled>↑</button>
+                <button id="left" class="direction-btn left" disabled>←</button>
+                <button id="right" class="direction-btn right" disabled>→</button>
+                <button id="down" class="direction-btn down" disabled>↓</button>
+            </div>
+        </div>
+        
+        <div class="log-section">
+            <h3 class="log-title">Game Log</h3>
+            <div id="log" class="log"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
